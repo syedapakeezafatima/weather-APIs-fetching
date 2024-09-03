@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather Widget</title>
+</head>
+<body>
+    
+    <div class="weather-widget">
+        <!-- Main Section -->
+         
+    <div class="search-section">
+        <input id="city-input" type="text" placeholder="Enter city ">
+        <button id="search-button">Search</button>
+    </div>
+        <div class="main-section">
+            <div class="location-date">
+                <h2>Multan</h2>
+                <p>21.04.2021</p>
+            </div>
+            <div class="temperature">
+                <h1>20&deg;</h1>
+                <p>Cloudy</p>
+            </div>
+            <div class="details">
+                <p>6.1 mph</p>
+                <p>90%</p>
+            </div>
+            <div class="forecast">
+                <div class="forecast-item active">
+                    <p>Today</p>
+                    <p>20&deg;</p>
+                    <p>Mist</p>
+                </div>
+                <div class="forecast-item">
+                    <p>Tue</p>
+                    <p>32&deg;</p>
+                    <p>Sunny</p>
+                </div>
+                <div class="forecast-item">
+                    <p>Wed</p>
+                    <p>12&deg;</p>
+                    <p>Rainy</p>
+                </div>
+                <div class="forecast-item">
+                    <p>Thu</p>
+                    <p>13&deg;</p>
+                    <p>Rainy</p>
+                </div>
+                <div class="forecast-item">
+                    <p>Fri</p>
+                    <p>22&deg;</p>
+                    <p>Mist</p>
+                </div>
+                <div class="forecast-item">
+                    <p>Sat</p>
+                    <p>22&deg;</p>
+                    <p>Mist</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Side Section -->
+        <div class="side-section">
+            <div class="greeting">
+                <p>Good Morning</p>
+                <p>12:27 PM</p>
+            </div>
+            <div class="side-temp">
+                <h2>20&deg;</h2>
+                <div class="side-details">
+                    <p>6.1 mph</p>
+                    <p>90%</p>
+                    <p>Feels like 19&deg;</p>
+                </div>
+                <p>Cloudy</p>
+            </div>
+            <div class="hourly-forecast">
+                <h3>Hourly Forecast</h3>
+                <div class="hourly-item">1 PM <br> 20&deg; <br> Cloudy</div>
+                <div class="hourly-item">2 PM <br> 21&deg; <br> Rainy</div>
+                <div class="hourly-item">3 PM <br> 21&deg; <br> Rainy</div>
+                <div class="hourly-item">4 PM <br> 20&deg; <br> Cloudy</div>
+                <div class="hourly-item">5 PM <br> 21&deg; <br> Rainy</div>
+                <div class="hourly-item">6 PM <br> 21&deg; <br> Rainy</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
