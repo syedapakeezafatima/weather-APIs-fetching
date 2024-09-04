@@ -7,18 +7,16 @@
     <title>Weather Widget</title>
 </head>
 <body>
-    
     <div class="weather-widget">
         <!-- Main Section -->
-         
-    <div class="search-section">
-        <input id="city-input" type="text" placeholder="Enter city ">
-        <button id="search-button">Search</button>
-    </div>
+        <form id="search-form" class="search-section">
+            <input id="city-input" type="text" placeholder="Enter city" required>
+            <button type="submit">Search</button>
+        </form>
         <div class="main-section">
             <div class="location-date">
                 <h2>Multan</h2>
-                <p>21.04.2021</p>
+               
             </div>
             <div class="temperature">
                 <h1>20&deg;</h1>
