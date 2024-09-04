@@ -10,18 +10,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f2f2;
+    background-color: #A0DEFF;
+     /* Replace with your background image */
+    background-size: cover;
 }
 
 .weather-widget {
     display: flex;
-    /* flex-wrap: wrap;
-    max-width: 1000px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px; */
-   
-   
+    background-color: #dceff4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(202, 51, 51, 0.1);
 }
 
 .main-section, .side-section {
@@ -44,11 +42,6 @@ body {
     margin-bottom: 5px;
 }
 
-.location-date p {
-    font-size: 16px;
-    color: gray;
-}
-
 .temperature h1 {
     font-size: 96px;
     margin: 10px 0;
@@ -66,21 +59,33 @@ body {
     margin-top: 10px;
 }
 
+.details p {
+    font-size: 16px;
+    color: #555;
+}
+
 .forecast {
     margin-top: 25px;
     display: flex;
     justify-content: space-around;
     padding: 20px 0;
+    gap: 10px;
 }
 
 .forecast-item {
+    font-size: 10px;
     text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    width: 80px;
+}
+.forecast-item:hover {
+    background-color: #A0DEFF;
 }
 
 .forecast-item.active {
     border: 2px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
 }
 
 .hourly-forecast {
@@ -114,24 +119,29 @@ body {
     margin: 2px 0;
 }
 
-.search-section{
+.search-section {
     display: block;
+    width: 220px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.search-section input {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    width: 200px;
-    margin-right: 10px;
-    margin-left: 15px;
+    margin-right: 5px;
     font-size: 16px;
-    margin-top: 20px;
 }
 
 .search-section button {
-
-    margin: 10px;
+    margin: 0;
     padding: 10px 20px;
-    background-color: #808992;
+    background-color: #bcd7f2;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: rgb(65, 63, 63);
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
@@ -141,22 +151,9 @@ body {
 .search-section button:hover {
     background-color: #adb2b7;
 }
-
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .weather-widget {
-        margin-top: 100%;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .search-section{
-        margin-top: 200px;
-    }
-
-    .main-section, .side-section {
-        width: 100%;
-        padding: 20px;
     }
 
     .main-section {
@@ -164,13 +161,67 @@ body {
         border-bottom: 1px solid #ddd;
     }
 
+    .side-section {
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .weather-widget{
+        margin-top: 200%;
+    }
+    .search-section {
+        flex-direction: column;
+    }
+
+    .search-section input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-section button {
+        width: 100%;
+    }
+
     .forecast {
         flex-wrap: wrap;
         padding: 10px;
     }
 
+    .forecast-item {
+        width: 45%;
+        margin: 5px auto;
+    }
+
     .hourly-item {
         width: 45%;
         margin: 5px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .temperature h1 {
+        font-size: 72px;
+    }
+
+    .temperature p {
+        font-size: 20px;
+    }
+
+    .details p {
+        font-size: 14px;
+    }
+
+    .side-temp h2 {
+        font-size: 36px;
+    }
+
+    .side-details p {
+        font-size: 12px;
+    }
+
+    .hourly-item {
+        width: 40%;
+        font-size: 12px;
     }
 }
