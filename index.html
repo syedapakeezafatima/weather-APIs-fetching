@@ -3,77 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <title>Weather Widget</title>
 </head>
 <body>
-    <div class="weather-widget">
-        <!-- Main Section -->
+
+    <div class="search-container">
         <form id="search-form" class="search-section">
             <input id="city-input" type="text" placeholder="Enter city" required>
-            <button type="submit">Search</button>
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i> 
+            </button>
         </form>
+    </div>
+
+   
+    <div class="weather-widget">
         <div class="main-section">
             <div class="location-date">
-                <h2>Multan</h2>
-               
+                <h2></h2> <!-- Placeholder for dynamic city name -->
             </div>
             <div class="temperature">
-                <h1>20&deg;</h1>
-                <p>Cloudy</p>
+                <h1></h1> <!-- Placeholder for dynamic temperature -->
+                <p></p> <!-- Placeholder for dynamic weather description -->
             </div>
             <div class="details">
-                <p>6.1 mph</p>
-                <p>90%</p>
+                <p>Wind: <span></span></p> <!-- Placeholder for dynamic wind speed -->
+                <p>Humidity: <span></span></p> 
             </div>
-            <div class="forecast">
-                <div class="forecast-item active">
-                    <p>Today</p>
-                    <p>20&deg;</p>
-                    <p>Mist</p>
-                </div>
-                <div class="forecast-item">
-                    <p>Tue</p>
-                    <p>32&deg;</p>
-                    <p>Sunny</p>
-                </div>
-                <div class="forecast-item">
-                    <p>Wed</p>
-                    <p>12&deg;</p>
-                    <p>Rainy</p>
-                </div>
-                <div class="forecast-item">
-                    <p>Thu</p>
-                    <p>13&deg;</p>
-                    <p>Rainy</p>
-                </div>
-                <div class="forecast-item">
-                    <p>Fri</p>
-                    <p>22&deg;</p>
-                    <p>Mist</p>
-                </div>
-                <div class="forecast-item">
-                    <p>Sat</p>
-                    <p>22&deg;</p>
-                    <p>Mist</p>
-                </div>
+            <div class="forecast weekly-forecast">
+            
             </div>
         </div>
-        
-        <!-- Side Section -->
+
+        <!-- right jis ma  geetings -->
         <div class="side-section">
             <div class="greeting">
-                <p>Good Morning</p>
-                <p>12:27 PM</p>
+                <p></p>
+                <p></p for time 
             </div>
             <div class="side-temp">
-                <h2>20&deg;</h2>
+                <h2></h2> 
                 <div class="side-details">
-                    <p>6.1 mph</p>
-                    <p>90%</p>
-                    <p>Feels like 19&deg;</p>
+                    <p>Wind: <span></span></p>
+                    <p>Humidity: <span></span></p> 
+                    <p>Feels like: <span></span></p> 
                 </div>
-                <p>Cloudy</p>
+                <p></p> 
             </div>
             <div class="hourly-forecast">
                 <h3>Hourly Forecast</h3>
@@ -86,6 +63,7 @@
             </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
