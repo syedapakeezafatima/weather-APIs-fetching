@@ -8,7 +8,6 @@
     <title>Weather Widget</title>
 </head>
 <body>
-
     <div class="search-container">
         <form id="search-form" class="search-section">
             <input id="city-input" type="text" placeholder="Enter city" required>
@@ -16,46 +15,41 @@
                 <i class="fa-solid fa-magnifying-glass"></i> 
             </button>
         </form>
-
     </div>
 
-   
     <div class="weather-widget">
-
         <div class="main-section">
             <div class="location-date">
-                <h2></h2> <!-- Placeholder for dynamic city name -->
+                <h2 id="city-name">Multan</h2>
+                <p id="current-date">21.04.2021</p>
             </div>
             <div class="temperature">
-                <h1></h1> <!-- Placeholder for dynamic temperature -->
-                <p></p> <!-- Placeholder for dynamic weather description -->
+                <div class="temp-icons">
+                    <h1 id="temp">20&deg;</h1>
+                    <div class="icons">
+                        <p><i class="fas fa-wind"></i> <span id="wind-speed">6.1 mph</span></p>
+                        <p><i class="fas fa-tint"></i> <span id="humidity">90%</span></p>
+                    </div>
+                </div>
+                <p id="weather-desc">Cloudy</p>
             </div>
-            <div class="details">
-                <p>Wind: <span></span></p> <!-- Placeholder for dynamic wind speed -->
-
-                <p>Humidity: <span></span></p> 
-            </div>
-            <div class="forecast weekly-forecast">
-            
+            <div class="forecast weekly-forecast" id="weekly-forecast">
+                <!-- Daily Forecast Placeholder -->
             </div>
         </div>
 
-        <!-- right jis ma  geetings -->
         <div class="side-section">
             <div class="greeting">
-                <p></p>
-                <p></p for time 
+                <p id="greeting-message">Good Morning</p>
+                <p id="current-time">12:27 PM</p>
             </div>
             <div class="side-temp">
-                <h2></h2> 
+                <h2 id="side-temp">20&deg;</h2>
                 <div class="side-details">
-                    <p>Wind: <span></span></p>
-                    <p>Humidity: <span></span></p> 
-                    <p>Feels like: <span></span></p> 
+                    <p>Wind: <span id="side-wind">6.1 mph</span></p>
+                    <p>Humidity: <span id="side-humidity">90%</span></p>
+                    <p>Feels like: <span id="feels-like">19&deg;</span></p>
                 </div>
-                <p></p> 
-
-
             </div>
             <div class="hourly-forecast">
                 <h3>Hourly Forecast</h3>
