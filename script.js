@@ -110,9 +110,14 @@ function updateWeatherData(data) {
     const current = data.main;
     const weather = data.weather[0];
 
+    // Capitalize the first letter of each word in the description
+    const capitalizedDescription = weather.description.split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+
     document.getElementById('city-name').textContent = data.name || 'No Address';
     document.getElementById('temp').innerHTML = `${Math.round(current.temp)}&deg;` || 'No Temp';
-    document.getElementById('weather-desc').textContent = weather.description || 'No Conditions';
+    document.getElementById('weather-desc').textContent = capitalizedDescription || 'No Conditions';
     document.getElementById('wind-speed').textContent = `${data.wind.speed} mph` || 'No Windspeed';
     document.getElementById('humidity').textContent = `${current.humidity}%` || 'No Humidity';
 
@@ -120,11 +125,12 @@ function updateWeatherData(data) {
     document.getElementById('side-temp').innerHTML = `${Math.round(current.temp)}&deg;` || 'No Temp';
     document.getElementById('side-wind').textContent = `${data.wind.speed} mph` || 'No Windspeed';
     document.getElementById('side-humidity').textContent = `${current.humidity}%` || 'No Humidity';
-    document.getElementById('feels-like').textContent = `${Math.round(current.feels_like)}&deg;` || 'No Feels Like Temp';
+    document.getElementById('feels-like').textContent = `${Math.round(current.feels_like)}\u00B0` || 'No Feels Like Temp';
     
     // Update date
     document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
+
 
 function updateGreeting(timezoneOffset) {
     const now = new Date();

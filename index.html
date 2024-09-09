@@ -8,17 +8,17 @@
     <title>Weather Widget</title>
 </head>
 <body>
-    <div class="search-container">
-        <form id="search-form" class="search-section">
-            <input id="city-input" type="text" placeholder="Enter city" required>
-            <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i> 
-            </button>
-        </form>
-    </div>
-
     <div class="weather-widget">
         <div class="main-section">
+            <!-- Search Section moved to Main Section -->
+            <div class="search-container">
+                <form id="search-form" class="search-section">
+                    <input id="city-input" type="text" placeholder="Enter city" required>
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i> 
+                    </button>
+                </form>
+            </div>
             <div class="location-date">
                 <h2 id="city-name">Multan</h2>
                 <p id="current-date">21.04.2021</p>
@@ -35,6 +35,40 @@
             </div>
             <div class="forecast weekly-forecast" id="weekly-forecast">
                 <!-- Daily Forecast Placeholder -->
+
+                <div class="weekly-forecast">
+                    <div class="forecast-item">
+                        <h3>Today</h3>
+                        <p>20&deg;C</p>
+                        <p>Mist</p>
+                    </div>
+                    <div class="forecast-item">
+                        <h3>Tue</h3>
+                        <p>32&deg;C</p>
+                        <p>Sunny</p>
+                    </div>
+                    <div class="forecast-item">
+                        <h3>Wed</h3>
+                        <p>12&deg;C</p>
+                        <p>Rainy</p>
+                    </div>
+                    <div class="forecast-item">
+                        <h3>Thu</h3>
+                        <p>13&deg;C</p>
+                        <p>Rainy</p>
+                    </div>
+                    <div class="forecast-item">
+                        <h3>Fri</h3>
+                        <p>22&deg;C</p>
+                        <p>Mist</p>
+                    </div>
+                    <div class="forecast-item">
+                        <h3>Sat</h3>
+                        <p>22&deg;C</p>
+                        <p>Mist</p>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
@@ -44,21 +78,26 @@
                 <p id="current-time">12:27 PM</p>
             </div>
             <div class="side-temp">
-                <h2 id="side-temp">20&deg;</h2>
-                <div class="side-details">
-                    <p>Wind: <span id="side-wind">6.1 mph</span></p>
-                    <p>Humidity: <span id="side-humidity">90%</span></p>
-                    <p>Feels like: <span id="feels-like">19&deg;</span></p>
+                <div class="temp-details">
+                    <h2 id="side-temp">20&deg;</h2>
+                    <div class="side-info">
+                        <p><i class="fas fa-wind"></i> <span id="side-wind">6.1 mph</span></p>
+                        <p><i class="fas fa-tint"></i> <span id="side-humidity">90%</span></p>
+                    </div>
                 </div>
+                <p class="feels-like">Feels like: <span id="feels-like">19</span></p>
             </div>
+            
             <div class="hourly-forecast">
-                <h3>Hourly Forecast</h3>
-                <div class="hourly-item">1 PM <br> 20&deg; <br> Cloudy</div>
-                <div class="hourly-item">2 PM <br> 21&deg; <br> Rainy</div>
-                <div class="hourly-item">3 PM <br> 21&deg; <br> Rainy</div>
-                <div class="hourly-item">4 PM <br> 20&deg; <br> Cloudy</div>
-                <div class="hourly-item">5 PM <br> 21&deg; <br> Rainy</div>
-                <div class="hourly-item">6 PM <br> 21&deg; <br> Rainy</div>
+                <h5>Hourly Forecast</h5>
+                <div class="poki">
+                    <div class="hourly-item">1PM <br> 20&deg; <br> Cloudy</div>
+                    <div class="hourly-item">2PM <br> 21&deg; <br> Rainy</div>
+                    <div class="hourly-item">3PM <br> 21&deg; <br> Rainy</div>
+                    <div class="hourly-item">4PM <br> 20&deg; <br> Cloudy</div>
+                    <div class="hourly-item">5PM <br> 21&deg; <br> Rainy</div>
+                    <div class="hourly-item">6PM <br> 21&deg; <br> Rainy</div>
+                </div>
             </div>
         </div>
     </div>

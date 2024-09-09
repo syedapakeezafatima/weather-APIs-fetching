@@ -15,52 +15,12 @@ body {
     background-color: #f0f0f0; /* Background color for visibility */
 }
 
-.search-container {
-    margin-top: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.search-section {
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-.search-section input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 200px;
-    font-size: 16px;
-}
-
-.search-section button {
-    padding: 10px;
-    background-color: #d0d3d7;
-    border: none;
-    border-radius: 5px;
-    color: rgb(65, 63, 63);
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.search-section button:hover {
-    background-color: #adb2b7;
-}
-
 .weather-widget {
     display: flex;
-    flex-wrap: wrap;
     background: #ffffff;
     border-radius: 15px;
     width: 80%;
-    max-width: 900px;
+    max-width: 1000px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-top: 20px;
@@ -79,6 +39,109 @@ body {
 .side-section {
     flex: 1;
     padding: 20px;
+    text-align: center;
+}
+
+/* Search Section */
+.search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.search-section {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Adjust search section width */
+}
+.greeting {
+    margin-bottom: 10px;
+}
+
+.greeting p {
+    font-size: 24px;
+    font-weight: 200px;
+    margin: 0;
+}
+
+.search-section input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+#current-time {
+    font-size: 22px;
+    margin: 25px 0;
+}
+
+.search-section button {
+    padding: 10px;
+    background-color: #d0d3d7;
+    border: none;
+    border-radius: 5px;
+    color: rgb(65, 63, 63);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-section button:hover {
+    background-color: #adb2b7;
+}
+
+/* Icons for Wind and Humidity */
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Adjusting the wind and humidity style to match the new style */
+.icons p {
+    font-size: 18px; /* Slightly larger font size for better visibility */
+    color: #666; /* Adjusted color to match the subtle grey tone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Add a bit more space between the icon and the text */
+}
+
+.icons i {
+    font-size: 20px; /* Increase the icon size */
+    color: #666; /* Set the icon color to match the text */
+}
+
+.icons {
+    display: flex;
+    flex-direction: column; /* Stack the icons vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Add space between the two icon sections */
+}
+
+
+.side-details p {
+    font-size: 15px; /* Increase font size for better visibility */
+    margin: 10px 0; /* Add spacing between each detail */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icons and text */
+}
+.side-details p i {
+    font-size: 14px; /* Bigger icons for better clarity */
+}
+.fas fa-wind{
+    justify-items: flex-end;
+}
+#feels-like {
+    display: inline-block;
+    margin-left: 5px;
 }
 
 .location-date {
@@ -91,7 +154,6 @@ body {
 .location-date h2 {
     font-size: 28px;
     font-weight: 600;
-  
 }
 
 .temperature {
@@ -99,7 +161,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin: 10px 0;
-    color: #c0c5ca;
+    color: #909193;
 }
 
 .temp-icons {
@@ -109,23 +171,10 @@ body {
 }
 
 .temp-icons h1 {
-    font-size: 86px;
+    font-size: 174px;
+    font-weight: 140;
     margin: 0 20px 0 0;
-    color: #333;
-}
-
-.icons {
-    display: flex;
-    gap: 15px;
-}
-
-.icons p {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin: 0;
-    font-size: 16px;
-    color: #555;
+    color: #a19d9d;
 }
 
 #weather-desc {
@@ -134,70 +183,142 @@ body {
     color: gray;
 }
 
-.details {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.details p {
-    font-size: 16px;
-    color: #555;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.greeting p {
-    font-size: 22px;
-    margin: 5px 0;
-    text-align: center;
-}
-
-.side-temp h2 {
-    font-size: 48px;
-    margin: 20px 0;
-}
-
-.side-details p {
-    font-size: 14px;
-    margin: 2px 0;
-}
-
 .hourly-forecast {
     margin-top: 30px;
     text-align: center;
+    margin-bottom: 10px;
+    
+}
+.side-temp {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #444;
+    margin: 20px;
 }
 
+.temp-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Spacing between temperature and wind/humidity details */
+}
+
+#side-temp {
+    font-size: 45px;
+   color: #939596;
+}
+
+.side-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+}
+
+.side-info p {
+    margin: 2px 0;
+}
+
+.side-info i {
+    margin-right: 5px;
+}
+
+.feels-like {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.poki{
+    margin-top: 12px;
+    
+}
 .hourly-item {
+    margin-top: 50px;
     display: inline-block;
     width: 70px;
     text-align: center;
-    padding: 10px;
+    padding: 23px;
+    justify-content: center;
     border: 1px solid #ddd;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 16px;
     font-size: 14px;
+    
 }
+
+.hourly-item br {
+    content: "";
+    display: block;
+    margin: 6px 0; 
+}
+
+
+.hourly-item {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.2; /* Adjust this value as needed */
+}
+
+
+
 .weekly-forecast {
-    display: flex; /* Use flexbox to align items horizontally */
-    justify-content: space-around; /* Space out each forecast evenly */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 60px;
-    padding: 10px 0;
-    gap: 10px; /* Gap between each forecast item */
+    margin-top: 30px;
+
 }
 
 .forecast-item {
-    text-align: center; /* Center text within each forecast item */
-    font-size: 14px;
-    background-color: #f5f5f5; /* Light background for each item */
-    padding: 10px;
+    text-align: center;
+    padding: 15px;
     border-radius: 5px;
-    width: 70px; /* Fixed width for consistent sizing */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a raised effect */
+    width: 80px; /* Set fixed width for consistency */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
+
+/* Highlight the first forecast item (e.g., Today) */
+.forecast-item:first-child {
+    border: 2px solid #e3e2e2; /* Add a border to highlight the first item */
+    font-weight: bold;
+    background-color: #edebeb; /* Different background for today */
+    border-radius: 10px;
+    width: 85px;
+    padding: 15px;
+}
+
+.forecast-item h3 {
+    font-weight: normal;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.forecast-item p {
+    font-size: 12px;
+    color: #666;
+    margin: 2px 0;
+}
+
+
+.forecast-item:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive Design Adjustments */
+@media screen and (max-width: 768px) {
+    .forecast-item {
+        width: 70px;
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .forecast-item:first-child {
+        width: 75px;
+        padding: 12px;
+    }
+}
+
 .forecast-item:hover {
     background-color: #c0c5ca;
 }
@@ -206,17 +327,16 @@ body {
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 16px;
-    color: #333; /* Darker color for day names */
+    color: #333;
 }
 
 .forecast-item p {
     margin: 3px 0;
-    color: #555; /* Lighter color for temperature and description */
+    color: #555;
     font-size: 14px;
 }
 
 
-/* Responsive Design */
 @media screen and (max-width: 1024px) {
     .weather-widget {
         flex-direction: column;
@@ -235,22 +355,20 @@ body {
     }
 
     .temp-icons h1 {
-        font-size: 72px; /* Smaller font size for tablets */
+        font-size: 72px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .search-section {
+        margin-top: 600px;
         flex-direction: column;
         gap: 10px;
-        margin-top: 700px;
     }
-    
-    
 
     .search-section input,
     .search-section button {
-        width: 90%;
+        width: 60%;
     }
 
     .weather-widget {
@@ -258,20 +376,21 @@ body {
     }
 
     .temp-icons h1 {
-        font-size: 64px; /* Smaller font size for mobile */
+        font-size: 64px;
     }
 
-    .icons p {
-        font-size: 14px;
-    }
+   
 
     .side-temp h2 {
-        font-size: 36px; /* Adjust font size for smaller screens */
+        font-size: 100px; /* Larger font size for the temperature */
+        font-weight: bold;
+        margin: 20px 0;
+        color: #e3e2e2;
     }
 
     .hourly-item {
         width: 45%;
-        margin: 5px auto;
+        margin: 10px auto;
     }
 }
 
@@ -281,7 +400,7 @@ body {
     }
 
     .temp-icons h1 {
-        font-size: 48px; /* Smaller font size for small mobile screens */
+        font-size: 48px;
     }
 
     .icons p {
@@ -301,4 +420,3 @@ body {
         font-size: 12px;
     }
 }
-
