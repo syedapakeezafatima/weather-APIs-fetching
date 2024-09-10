@@ -30,10 +30,12 @@ body {
     padding: 20px;
     text-align: center;
 }
-
+.side-section{
+    background-color: #f7f7f7;
+}
 .main-section {
     flex: 2;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #eaeaea;
 }
 
 .side-section {
