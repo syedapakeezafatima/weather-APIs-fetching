@@ -15,17 +15,18 @@ body {
     margin: 0;
     background-color: #f0eeee; /* Background color for visibility */
 }
-
 .weather-widget {
     display: flex;
     background: #fffdfd;
     border-radius: 15px;
-    width: 100%;
-    max-width: 1000px;
-  
+    width: 95vw; /* Full viewport width */
+    height: 95vh; /* Full viewport height */
     padding: 10px;
-    margin-top: 20px;
+    margin: 0; /* Remove default margin */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
+
+
 
 .main-section, .side-section {
     padding: 20px;
@@ -67,8 +68,8 @@ body {
 }
 
 .greeting p {
-    font-size: 24px;
-    font-weight: 200px;
+    font-size: 34px;
+    font-weight: 210px;
     margin: 0;
 }
 
@@ -80,8 +81,9 @@ body {
     font-size: 16px;
 }
 #current-time {
-    font-size: 22px;
+    font-size: 30px;
     margin: 25px 0;
+    margin-top: 50px;
 }
 
 .search-section button {
@@ -103,12 +105,13 @@ body {
 .icons {
     display: flex;
     gap: 15px;
+    font-size: 50px;
 }
 
 /* Adjusting the wind and humidity style to match the new style */
 .icons p {
-    font-size: 18px; /* Slightly larger font size for better visibility */
-    color: #666; /* Adjusted color to match the subtle grey tone */
+    font-size: 25px; /* Slightly larger font size for better visibility */
+    color: #4f4e4e; /* Adjusted color to match the subtle grey tone */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,8 +160,8 @@ body {
 }
 
 .location-date h2 {
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 48px;
+    font-weight: 80px;
 }
 
 .temperature {
@@ -176,22 +179,23 @@ body {
 }
 
 .temp-icons h1 {
-    font-size: 184px;
-    font-weight: 140;
+    font-size: 240px;
+   font-weight: lighter;
     margin: 0 20px 0 0;
-    color: #a19d9d;
+    color: #afacac;
 }
 
 #weather-desc {
     margin-top: 8px;
-    font-size: 30px;
+    font-size: 48px;
     color: gray;
 }
 
 .hourly-forecast {
-    margin-top: 30px;
+    margin-top: 50px;
     text-align: center;
     margin-bottom: 10px;
+    font-size: 40px;
     
 }
 .side-temp {
@@ -202,22 +206,22 @@ body {
 }
 
 .temp-details {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    gap: 10px; /* Spacing between temperature and wind/humidity details */
+    gap: 15px; /* Spacing between temperature and wind/humidity details */
 }
 
 #side-temp {
-    font-size: 45px;
-   color: #939596;
+    font-size: 63px;
+   color: #9e9fa0;
 }
 
 .side-info {
     display: flex;
     flex-direction: column;
-    font-size: 11px;
+    font-size: 17px;
 }
 
 .side-info p {
@@ -229,29 +233,34 @@ body {
 }
 
 .feels-like {
-    margin-top: 15px;
-    font-size: 13px;
+    margin-top: 29px;
+    font-size: 20px;
+}
+.poki {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px; /* Space between items */
+    margin-top: 40px;
 }
 
-.poki{
-    margin-top: 12px;
-    
-    
-}
 .hourly-item {
-   
+    background: #f0f0f0; /* Light background for visibility */
+    padding: 10px;
+    text-align: center;
     margin-top: 50px;
     display: inline-block;
-    width: 70px;
-    text-align: center;
-    padding: 23px;
+    width: 100px;
+    padding: 33px;
     justify-content: center;
     border: 1px solid #ddd;
     margin: 5px;
     border-radius: 16px;
     font-size: 14px;
-    
 }
+
+
+  
+
 
 .hourly-item br {
     content: "center";
@@ -276,7 +285,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 18px;
+    margin-top: 130px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
