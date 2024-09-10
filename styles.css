@@ -12,12 +12,12 @@ body {
     height: 100vh;
     justify-content: center;
     margin: 0;
-    background-color: #ffffff; /* Background color for visibility */
+    background-color: #f0eeee; /* Background color for visibility */
 }
 
 .weather-widget {
     display: flex;
-    background: #ffffff;
+    background: #fffdfd;
     border-radius: 15px;
     width: 100%;
     max-width: 1000px;
@@ -250,12 +250,16 @@ body {
 
 .hourly-item br {
     content: "center";
+    text-align: center;
+    justify-content: center;
     display: block;
     margin: 6px 0; 
+   
 }
 
 
 .hourly-item {
+    font-weight: 10px          ;
     font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 1.4; /* Adjust this value as needed */
