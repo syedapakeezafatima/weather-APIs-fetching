@@ -280,14 +280,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
+    justify-content: space-evenly;
 }
 
 
 .forecast-item {
     margin-top: 20px;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     border-radius: 5px;
     width: 80px; /* Set fixed width for consistency */
     font-size: 16px;
@@ -304,7 +304,7 @@ body {
     
     border-radius: 10px;
     width: 85px;
-    padding: 20px;
+    padding: 25px;
 }
 
 .forecast-item h3 {
