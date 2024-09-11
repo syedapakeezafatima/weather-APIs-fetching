@@ -18,9 +18,9 @@ body {
 .weather-widget {
     display: flex;
     background: #fffdfd;
-    border-radius: 15px;
-    width: 95vw; /* Full viewport width */
-    height: 95vh; /* Full viewport height */
+    border-radius: 18px;
+    width: 90vw; /* Full viewport width */
+    height: 90vh; /* Full viewport height */
     padding: 10px;
     margin: 0; /* Remove default margin */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
@@ -29,7 +29,7 @@ body {
 
 
 .main-section, .side-section {
-    padding: 20px;
+    padding: 70px;
     text-align: center;
 }
 .side-section{
@@ -42,7 +42,7 @@ body {
 
 .side-section {
     flex: 1;
-    padding: 20px;
+    padding: 4px;
     text-align: center;
 }
 
@@ -63,7 +63,7 @@ body {
     width: 80%; /* Adjust search section width */
 }
 .greeting {
-    margin-top: 15px;
+    margin-top: 22px;
     margin-bottom: 10px;
 }
 
@@ -131,6 +131,59 @@ body {
     gap: 10px; /* Add space between the two icon sections */
 }
 
+.weekly-forecast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+
+.forecast-item {
+    
+    text-align: center;
+    padding: 22px;
+    border-radius: 5px;
+    width: 90px; /* Set fixed width for consistency */
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Highlight the first forecast item (e.g., Today) */
+.forecast-item:first-child {
+    border: 2px solid #e3e2e2; /* Add a border to highlight the first item */
+    font-weight: bold;
+    border-radius: 10px;
+    width: 90px;
+    padding: 22px;
+}
+
+.forecast-item h3 {
+    font-weight: normal;
+    font-size: 100px;
+    color: #0e0e0e;
+    margin-bottom: 5px;
+    
+}
+
+.forecast-item p {
+    font-size: 17px;
+    color: #f6f5f5;
+    margin: 2px 0;
+   
+}
+
+.forecast-item:hover {
+    background-color: #e3e0e0;
+}
+ 
 
 .side-details p {
     font-size: 15px; /* Increase font size for better visibility */
@@ -191,13 +244,6 @@ body {
     color: gray;
 }
 
-.hourly-forecast {
-    margin-top: 50px;
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 40px;
-    
-}
 .side-temp {
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -236,106 +282,79 @@ body {
     margin-top: 29px;
     font-size: 20px;
 }
+/* Hourly forecast design  */
+.hourly-forecast {
+    margin: 55px 0 10px; /* Combined margin settings */
+    text-align: center;
+    font-size: 24px; /* Adjusted font size for better readability */
+}
+
+.hourly-forecast h5 {
+    font-size: 24px; /* Adjust the heading size */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
 .poki {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-columns: repeat(3, 100px); /* 3 columns, each 100px wide */
     gap: 10px; /* Space between items */
-    margin-top: 40px;
+    margin-top: 20px; /* Reduced top margin for better alignment */
+    justify-content: center; /* Center grid horizontally */
 }
 
 .hourly-item {
-    background: #f0f0f0; /* Light background for visibility */
-    padding: 10px;
+    background: #fbfbfb; /* Light background for visibility */
+    padding: 5px; /* Padding inside the item */
     text-align: center;
-    margin-top: 50px;
-    display: inline-block;
-    width: 100px;
-    padding: 33px;
-    justify-content: center;
-    border: 1px solid #ddd;
-    margin: 5px;
-    border-radius: 16px;
-    font-size: 14px;
+    border: 1px solid #c6c6c6; /* Border for item */
+    border-radius: 16px; /* Rounded corners */
+    font-family: Arial, sans-serif;
+    line-height: 1.1; /* Adjust line-height for readability */
+    width: 100px; /* Fixed width */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add subtle shadow */
 }
 
+.time {
+    display: block;
+    font-weight: 100px; /* Increase font weight for time */
+    font-size: 17px; /* Adjust font size for time if needed */
+}
 
-  
+.temperature {
+    display: block;
+    font-size: 28px; /* Increase font size for temperature */
+    font-weight: normal; /* Normal weight for temperature */
+    margin: 3px 0; /* Space around the temperature */
+}
 
+.weather-condition {
+    display: block;
+    font-size: 18px; /* Default font size for weather conditions */
+    font-weight: normal; /* Normal weight for weather conditions */
+    margin: 6px 0; /* Space around the weather condition */
+}
+
+/* Specific sizes for weather conditions */
+.weather-condition.rain {
+    font-size: 16px; /* Size for rain condition */
+    color: #939393;
+}
+
+.weather-condition.cloud {
+    font-size: 16px; /* Size for cloud condition */
+    color: #939393;
+}
+
+.weather-condition.haze {
+    font-size: 16px; /* Size for haze condition */
+    color: #939393;
+}
 
 .hourly-item br {
-    content: "center";
-    text-align: center;
-    justify-content: center;
     display: block;
-    margin: 6px 0; 
-   
+    margin: 6px 0; /* Space around the line break */
 }
 
-
-.hourly-item {
-    font-weight: 10px          ;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.4; /* Adjust this value as needed */
-}
-
-
-
-.weekly-forecast {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 130px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-
-.forecast-item {
-    margin-top: 20px;
-    text-align: center;
-    padding: 25px;
-    border-radius: 5px;
-    width: 80px; /* Set fixed width for consistency */
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-/* Highlight the first forecast item (e.g., Today) */
-.forecast-item:first-child {
-    border: 2px solid #e3e2e2; /* Add a border to highlight the first item */
-    font-weight: bold;
-    
-    border-radius: 10px;
-    width: 85px;
-    padding: 25px;
-}
-
-.forecast-item h3 {
-    font-weight: normal;
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
-    
-}
-
-.forecast-item p {
-    font-size: 12px;
-    color: #abaaaa;
-    margin: 2px 0;
-   
-}
-
-
-.forecast-item:hover {
-    background-color: #e3e0e0;
-}
- 
 
 /* Responsive Design Adjustments */
 @media screen and (max-width: 768px) {
@@ -395,7 +414,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .search-section {
-        margin-top: 700px;
+        margin-top: 70px;
         flex-direction: column;
         gap: 10px;
     }
