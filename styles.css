@@ -52,7 +52,7 @@ body {
     justify-content: center;
     width: 100%;
     margin-bottom: 20px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .search-section {
@@ -415,7 +415,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .search-section {
-        margin-top: 70px;
+        margin-top: 40px;
         flex-direction: column;
         gap: 10px;
     }
