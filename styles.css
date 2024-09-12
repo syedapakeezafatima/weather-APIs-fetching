@@ -52,7 +52,7 @@ body {
     justify-content: center;
     width: 100%;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .search-section {
@@ -390,65 +390,6 @@ body {
 }
 
 
-@media screen and (max-width: 1024px) {
-    .weather-widget {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .main-section {
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-        width: 100%;
-    }
-
-    .side-section {
-        border-left: none;
-        width: 100%;
-    }
-
-    .temp-icons h1 {
-        font-size: 72px;
-    }
-    
-}
-
-@media screen and (max-width: 768px) {
-    .search-section {
-        margin-top: 40px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .search-section input,
-    .search-section button {
-        width: 60%;
-    }
-    .forecast weekly-forecast{
-        display: inline-flex;
-        
-    }
-
-    .weather-widget {
-        width: 90%;
-    }
-
-    .temp-icons h1 {
-        font-size: 64px;
-    }
-
-    .side-temp h2 {
-        font-size: 100px; /* Larger font size for the temperature */
-        font-weight: bold;
-        margin: 20px 0;
-        color: #e3e2e2;
-    }
-
-    .hourly-item {
-        width: 45%;
-        margin: 10px auto;
-    }
-}
 
 @media screen and (max-width: 480px) {
    
@@ -483,10 +424,45 @@ body {
         font-size: 12px;
     }
 }
+@media screen and (max-width: 1024px) {
+    .weather-widget {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .weekly-forecast {
+        margin-top: 4px;
+        padding: 10px;
+    }
 
+    .poki {
+        margin-bottom: 5px;
+    }
 
+    .main-section {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        width: 250%;
+    }
 
+    .side-section {
+        border-left: none;
+        width: 80%;
+    }
 
-
-
+    .temp-icons h1 {
+        font-size: 10px;
+}
+.weather-desc{
+    font-size: small;
+    margin-top: 5px;
+}
+.forecast-item{
+    padding: 8px;
+}
+.hourly-item{
+    margin-bottom: 10px;
+    padding: 10px;
+}
+}  
