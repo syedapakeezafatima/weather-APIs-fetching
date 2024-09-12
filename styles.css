@@ -135,7 +135,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 35px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -309,14 +309,15 @@ body {
     border: 1px solid #c6c6c6; /* Border for item */
     border-radius: 16px; /* Rounded corners */
     font-family: Arial, sans-serif;
-    line-height: 1.1; /* Adjust line-height for readability */
+    line-height: 1.0; /* Adjust line-height for readability */
     width: 100px; /* Fixed width */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add subtle shadow */
 }
 
 .time {
     display: block;
-    font-weight: 100px; /* Increase font weight for time */
+    margin-top: 10px;
+    font-weight: 180px; /* Increase font weight for time */
     font-size: 17px; /* Adjust font size for time if needed */
 }
 
@@ -336,18 +337,18 @@ body {
 
 /* Specific sizes for weather conditions */
 .weather-condition.rain {
-    font-size: 16px; /* Size for rain condition */
-    color: #939393;
+    font-size: 17px; /* Size for rain condition */
+    color: #858585;
 }
 
 .weather-condition.cloud {
-    font-size: 16px; /* Size for cloud condition */
-    color: #939393;
+    font-size: 17px; /* Size for cloud condition */
+    color: #888888;
 }
 
 .weather-condition.haze {
-    font-size: 16px; /* Size for haze condition */
-    color: #939393;
+    font-size: 17px; /* Size for haze condition */
+    color: #7e7e7e;
 }
 
 .hourly-item br {
