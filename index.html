@@ -10,7 +10,7 @@
 <body>
     <div class="weather-widget">
         <div class="main-section">
-            <!-- Search Section moved to Main Section -->
+            <!-- Search Section -->
             <div class="search-container">
                 <form id="search-form" class="search-section">
                     <input id="city-input" type="text" placeholder="Enter city" required>
@@ -19,10 +19,12 @@
                     </button>
                 </form>
             </div>
+            <!-- Location and Date Section -->
             <div class="location-date">
                 <h2 id="city-name">Multan</h2>
                 <p id="current-date">21.04.2021</p>
             </div>
+            <!-- Temperature and Weather Icons -->
             <div class="temperature">
                 <div class="temp-icons">
                     <h1 id="temp">20&deg;</h1>
@@ -33,45 +35,40 @@
                 </div>
                 <p id="weather-desc">Cloudy</p>
             </div>
+            <!-- Weekly Forecast -->
             <div class="forecast weekly-forecast" id="weekly-forecast">
-                <!-- Daily Forecast Placeholder -->
-
-                <div class="weekly-forecast">
-                    <div class="forecast-item">
-                        <h3>Today</h3>
-                        <p>20&deg;C</p>
-                        <p>Mist</p>
-                    </div>
-                    <div class="forecast-item">
-                        <h3>Tue</h3>
-                        <p>32&deg;C</p>
-                        <p>Sunny</p>
-                    </div>
-                    <div class="forecast-item">
-                        <h3>Wed</h3>
-                        <p>12&deg;C</p>
-                        <p>Rainy</p>
-                    </div>
-                    <div class="forecast-item">
-                        <h3>Thu</h3>
-                        <p>13&deg;C</p>
-                        <p>Rainy</p>
-                    </div>
-                    <div class="forecast-item">
-                        <h3>Fri</h3>
-                        <p>22&deg;C</p>
-                        <p>Mist</p>
-                    </div>
-                    <div class="forecast-item">
-                        <h3>Sat</h3>
-                        <p>22&deg;C</p>
-                        <p>Mist</p>
-                    </div>
+                <div class="forecast-item">
+                    <h3>Fri</h3>
+                    <p>10.7°C<br><span>broken clouds</span></p>
                 </div>
-                
+                <div class="forecast-item">
+                    <h3>Sat</h3>
+                    <p>12.6°C<br><span>clear sky</span></p>
+                </div>
+                <div class="forecast-item">
+                    <h3>Sun</h3>
+                    <p>14.2°C<br><span>overcast clouds</span></p>
+                </div>
+                <div class="forecast-item">
+                    <h3>Mon</h3>
+                    <p>16.1°C<br><span>overcast clouds</span></p>
+                </div>
+                <div class="forecast-item">
+                    <h3>Tue</h3>
+                    <p>14.0°C<br><span>scattered clouds</span></p>
+                </div>
+                <div class="forecast-item">
+                    <h3>Wed</h3>
+                    <p>13.0°C<br><span>light rain</span></p>
+                </div>
+                <div class="forecast-item">
+                    <h3>Thu</h3>
+                    <p>11.5°C<br><span>mist</span></p>
+                </div>
             </div>
         </div>
 
+        <!-- Side Section -->
         <div class="side-section">
             <div class="greeting">
                 <p id="greeting-message">Good Morning</p>
@@ -87,7 +84,8 @@
                 </div>
                 <p class="feels-like">Feels like: <span id="feels-like">19</span></p>
             </div>
-            
+
+            <!-- Hourly Forecast -->
             <div class="hourly-forecast">
                 <h5>Hourly Forecast</h5>
                 <div class="poki">
@@ -123,9 +121,6 @@
                     </div>
                 </div>
             </div>
-            
-            </div>
-            
         </div>
     </div>
 

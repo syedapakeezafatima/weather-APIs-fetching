@@ -42,8 +42,8 @@ function fetchWeatherData(city) {
         });
 }
 
-function fetchWeeklyForecast(city, apiKey) {
-    const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
+function fetchWeeklyForecast(lat, lon, apiKey) {
+    const forecastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=metric&appid=${apiKey}`;
 
     fetch(forecastUrl)
         .then(response => {
@@ -53,8 +53,8 @@ function fetchWeeklyForecast(city, apiKey) {
             return response.json();
         })
         .then(data => {
-            if (data && data.list) {
-                const dailyForecast = processDailyForecast(data.list);
+            if (data && data.daily) {
+                const dailyForecast = data.daily.slice(0, 7); // Get 7 days of forecast
                 updateWeeklyForecast(dailyForecast);
             } else {
                 alert('Weekly forecast data not available!');
@@ -66,27 +66,21 @@ function fetchWeeklyForecast(city, apiKey) {
         });
 }
 
-function processDailyForecast(forecastList) {
+function updateWeeklyForecast(dailyForecast) {
+    const forecastContainer = document.getElementById('weekly-forecast');
+    forecastContainer.innerHTML = ''; // Clear previous content
 
-    // yehn ek emply object creat kia ha 
-
-    const dailyForecast = {}; 
-
-    forecastList.forEach(item => {
-        const date = new Date(item.dt * 1000);
-        // const date = new Date(item.dt * 1000);  converts this Unix timestamp into a JavaScript Date object. The multiplication by 1000 is necessary because JavaScript's Date constructor expects milliseconds, not seconds
-        const day = date.toLocaleDateString('en-US', { weekday: 'short' });
-
-        
-        if (!dailyForecast[day]) {
-            dailyForecast[day] = {
-                temp: item.main.temp,
-                description: item.weather[0].description,
-            };
-        }
+    dailyForecast.forEach((day) => {
+        const date = new Date(day.dt * 1000).toLocaleDateString('en-US', { weekday: 'short' });
+        const forecastItem = `
+            <div class="forecast-item">
+                <h3>${date}</h3>
+                <p>${day.temp.day.toFixed(1)}&deg;C</p>
+                <p>${day.weather[0].description}</p>
+            </div>
+        `;
+        forecastContainer.innerHTML += forecastItem;
     });
-
-    return dailyForecast;
 }
 
 function updateWeeklyForecast(dailyForecast) {
@@ -132,31 +126,7 @@ function updateWeatherData(data) {
 }
 
 
-function updateGreeting(timezoneOffset) {
-    const now = new Date();
-    const utcTime = now.getTime() + now.getTimezoneOffset() * 60000; 
-    const localTime = new Date(utcTime + timezoneOffset * 1000); 
 
-    const hours = localTime.getUTCHours(); 
-    const greetingElement = document.getElementById('greeting-message');
-    const timeElement = document.getElementById('current-time');
-
-    if (hours >= 5 && hours < 12) {
-        greetingElement.textContent = 'Good Morning';
-    } else if (hours >= 12 && hours < 17) {
-        greetingElement.textContent = 'Good Afternoon';
-    } else if (hours >= 17 && hours < 21) {
-        greetingElement.textContent = 'Good Evening';
-    } else {
-        greetingElement.textContent = 'Good Night';
-    }
-
-    timeElement.textContent = new Intl.DateTimeFormat('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-        timeZone: 'UTC'
-    }).format(localTime);
-}
 function updateGreeting(timezoneOffset) {
     const now = new Date();
     const utcTime = now.getTime() + now.getTimezoneOffset() * 60000;

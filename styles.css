@@ -1,49 +1,28 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
+/* General styles */
 body {
-    
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     height: 100vh;
-    justify-content: center;
-    margin: 0;
-    background-color: #f0eeee; /* Background color for visibility */
 }
+
 .weather-widget {
+    background-color: white;
+    border-radius: 20px;
     display: flex;
-    background: #fffdfd;
-    border-radius: 18px;
-    width: 90vw; /* Full viewport width */
-    height: 90vh; /* Full viewport height */
-    padding: 10px;
-    margin: 0; /* Remove default margin */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    width: 1400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-
-
-.main-section, .side-section {
-    padding: 70px;
-    text-align: center;
-}
-.side-section{
-    background-color: #f7f7f7;
-}
+/* Main section styling */
 .main-section {
-    flex: 2;
-    border-right: 1px solid #eaeaea;
-}
-
-.side-section {
-    flex: 1;
-    padding: 4px;
-    text-align: center;
+    padding: 30px;
+    flex: 3;
 }
 
 /* Search Section */
@@ -60,171 +39,33 @@ body {
     gap: 10px;
     justify-content: center;
     align-items: center;
-    width: 80%; /* Adjust search section width */
-}
-.greeting {
-    margin-top: 22px;
-    margin-bottom: 10px;
+    width: 80%;
 }
 
-.greeting p {
-    font-size: 34px;
-    font-weight: 210px;
-    margin: 0;
-}
-
-.search-section input {
+/* Increase the width of the search bar */
+#city-input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 100%;
-    font-size: 16px;
-}
-#current-time {
-    font-size: 30px;
-    margin: 25px 0;
-    margin-top: 50px;
+    width: 500px; /* Increased width for the search bar */
 }
 
-.search-section button {
-    padding: 10px;
-    background-color: #d0d3d7;
-    border: none;
-    border-radius: 5px;
-    color: rgb(65, 63, 63);
+button {
+    background-color: transparent;
+    border: none; /* Corrected border styling */
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.search-section button:hover {
-    background-color: #adb2b7;
-}
-
-/* Icons for Wind and Humidity */
-.icons {
-    display: flex;
-    gap: 15px;
-    font-size: 50px;
-}
-
-/* Adjusting the wind and humidity style to match the new style */
-.icons p {
-    font-size: 25px; /* Slightly larger font size for better visibility */
-    color: #4f4e4e; /* Adjusted color to match the subtle grey tone */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; /* Add a bit more space between the icon and the text */
-}
-
-.icons i {
-    font-size: 20px; /* Increase the icon size */
-    color: #666; /* Set the icon color to match the text */
-}
-
-.icons {
-    display: flex;
-    flex-direction: column; /* Stack the icons vertically */
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Add space between the two icon sections */
-}
-
-.weekly-forecast {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 35px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    
-}
-
-
-.forecast-item {
-    
-    text-align: center;
-    padding: 22px;
-    border-radius: 5px;
-    width: 90px; /* Set fixed width for consistency */
-    font-size: 25px;
-    transition: background-color 0.3s ease;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Highlight the first forecast item (e.g., Today) */
-.forecast-item:first-child {
-    border: 2px solid #e3e2e2; /* Add a border to highlight the first item */
-    font-weight: bold;
-    border-radius: 10px;
-    width: 90px;
-    padding: 22px;
-}
-
-.forecast-item h3 {
-    font-weight: normal;
-    font-size: 100px;
-    color: #0e0e0e;
-    margin-bottom: 5px;
-    
-}
-
-.forecast-item p {
-    font-size: 17px;
-    color: #f6f5f5;
-    margin: 2px 0;
-   
-}
-
-.forecast-item:hover {
-    background-color: #e3e0e0;
-}
- 
-
-.side-details p {
-    font-size: 15px; /* Increase font size for better visibility */
-    margin: 10px 0; /* Add spacing between each detail */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Space between icons and text */
-}
-.side-details p i {
-    font-size: 14px; /* Bigger icons for better clarity */
-}
-.fas fa-wind{
-    justify-items: flex-end;
-}
-#feels-like {
-    display: inline-block;
-    margin-left: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Corrected box-shadow property */
 }
 
 .location-date {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 18px; /* Increased font size for city name and date */
+    color: #555;
 }
 
-.location-date h2 {
-    font-size: 48px;
-    font-weight: 80px;
-}
-
-.temperature {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
-    color: #909193;
-}
-
+/* Temperature and icons styling */
 .temp-icons {
     display: flex;
     align-items: center;
@@ -233,7 +74,7 @@ body {
 
 .temp-icons h1 {
     font-size: 240px;
-   font-weight: lighter;
+    font-weight: lighter;
     margin: 0 20px 0 0;
     color: #afacac;
 }
@@ -242,13 +83,117 @@ body {
     margin-top: 8px;
     font-size: 48px;
     color: gray;
+    text-align: center;
+}
+
+/* Weekly forecast styling */
+.weekly-forecast {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 35px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+/* Forecast item styling */
+/* Weekly forecast styling */
+.weekly-forecast {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 35px;
+    flex-wrap: nowrap;
+    overflow: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensure the container takes full width */
+    padding: 0 15px; /* Add padding to the container for spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Forecast item styling */
+.forecast-item {
+    text-align: center;
+    padding: 25px 10px; /* Increased padding */
+    border-radius: 10px;
+    width: 90px;
+    font-size: 16px;
+    color: #777;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex; /* Flex to center-align content */
+    flex-direction: column; /* Align content vertically */
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid transparent;
+    flex: 0 0 auto; /* Prevent shrinking and allow all items to be in a row */
+    margin: 0 5px; /* Reduce spacing between each day */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Highlight the first forecast item (e.g., Today) */
+.forecast-item:first-child {
+    border: 2px solid #e3e2e2;
+    font-weight: normal;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 25px 10px; /* Match the padding of other items */
+    width: 90px;
+}
+
+/* Forecast item text styling */
+.forecast-item h3 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.forecast-item p {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+}
+
+/* Hover effect */
+.forecast-item:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Side section styling */
+.side-section {
+    background-color: #f8f8f8;
+    padding: 30px;
+    flex: 1;
+    border-left: 1px solid #ddd;
+}
+
+.greeting {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 22px; /* Increased font size for greetings */
+}
+
+.greeting p:first-child {
+    font-size: 36px; /* Further increased font size for greeting title */
+    margin-bottom: 5px;
+    font-weight: bold; /* Corrected font-weight */
+}
+
+.greeting p:last-child {
+    font-size: 32px; /* Further increased font size for greeting message */
+    color: #777;
+    font-weight: bold; /* Corrected font-weight */
 }
 
 .side-temp {
-    font-family: 'Arial', sans-serif;
     text-align: center;
     color: #444;
     margin: 20px;
+    font-size: 120px; /* Further increased font size for side temp */
 }
 
 .temp-details {
@@ -256,213 +201,230 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px; /* Spacing between temperature and wind/humidity details */
-}
-
-#side-temp {
-    font-size: 63px;
-   color: #9e9fa0;
+    gap: 15px;
+    font-size: 22px; /* Further increased font size for temp details */
 }
 
 .side-info {
     display: flex;
     flex-direction: column;
-    font-size: 17px;
+    gap: 5px;
+    font-size: 14px;
+    color: #777;
 }
 
 .side-info p {
-    margin: 2px 0;
-}
-
-.side-info i {
-    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
 }
 
 .feels-like {
-    margin-top: 29px;
-    font-size: 20px;
+    font-size: 18px; /* Further increased font size for feels like */
+    color: #555;
+    margin-top: 5px;
 }
-/* Hourly forecast design  */
+
+/* Hourly forecast design */
 .hourly-forecast {
-    margin: 55px 0 10px; /* Combined margin settings */
+    margin: 55px 0 10px;
     text-align: center;
-    font-size: 24px; /* Adjusted font size for better readability */
+    font-size: 28px; /* Further increased font size for hourly forecast title */
 }
 
 .hourly-forecast h5 {
-    font-size: 24px; /* Adjust the heading size */
-    margin-bottom: 10px; /* Space below the heading */
+    font-size: 28px; /* Further increased font size for hourly forecast heading */
+    margin-bottom: 10px;
 }
 
 .poki {
     display: grid;
-    grid-template-columns: repeat(3, 100px); /* 3 columns, each 100px wide */
-    gap: 10px; /* Space between items */
-    margin-top: 20px; /* Reduced top margin for better alignment */
-    justify-content: center; /* Center grid horizontally */
+    grid-template-columns: repeat(3, 100px);
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
 }
 
 .hourly-item {
-    background: #fbfbfb; /* Light background for visibility */
-    padding: 5px; /* Padding inside the item */
+    background: #fbfbfb;
+    padding: 5px;
     text-align: center;
-    border: 1px solid #c6c6c6; /* Border for item */
-    border-radius: 16px; /* Rounded corners */
-    font-family: Arial, sans-serif;
-    line-height: 1.0; /* Adjust line-height for readability */
-    width: 100px; /* Fixed width */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add subtle shadow */
+    border: 1px solid #c6c6c6;
+    border-radius: 16px;
+    line-height: 1.0;
+    width: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hourly-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .time {
     display: block;
     margin-top: 10px;
-    font-weight: 180px; /* Increase font weight for time */
-    font-size: 17px; /* Adjust font size for time if needed */
+    font-weight: 400;
+    font-size: 22px; /* Further increased font size for time */
 }
 
 .temperature {
     display: block;
-    font-size: 28px; /* Increase font size for temperature */
-    font-weight: normal; /* Normal weight for temperature */
-    margin: 3px 0; /* Space around the temperature */
+    font-size: 24px; /* Further increased font size for temperature */
+    font-weight: normal;
+    margin: 3px 0;
 }
 
 .weather-condition {
     display: block;
-    font-size: 18px; /* Default font size for weather conditions */
-    font-weight: normal; /* Normal weight for weather conditions */
-    margin: 6px 0; /* Space around the weather condition */
+    font-size: 20px; /* Further increased font size for weather condition */
+    font-weight: normal;
+    margin: 6px 0;
 }
 
-/* Specific sizes for weather conditions */
 .weather-condition.rain {
-    font-size: 17px; /* Size for rain condition */
+    font-size: 20px;
     color: #858585;
 }
-
-.weather-condition.cloud {
-    font-size: 17px; /* Size for cloud condition */
-    color: #888888;
-}
-
-.weather-condition.haze {
-    font-size: 17px; /* Size for haze condition */
-    color: #7e7e7e;
-}
-
-.hourly-item br {
-    display: block;
-    margin: 6px 0; /* Space around the line break */
-}
-
-
-/* Responsive Design Adjustments */
-@media screen and (max-width: 768px) {
-    .forecast-item {
-        width: 70px;
-        padding: 8px;
-        font-size: 14px;
-    }
-    
-    .forecast-item:first-child {
-        width: 50px;
-        padding: 10px;
-        margin-left: 0%;
-    }
-}
-
-.forecast-item:hover {
-    background-color: #d3d6da;
-}
-
-.forecast-item h3 {
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #191616;
-}
-
-.forecast-item p {
-    margin: 3px 0;
-    color: #555;
-    font-size: 14px;
-}
-
-
-
-@media screen and (max-width: 480px) {
-   
-    .location-date h2 {
-        font-size: 20px;
-    }
-    .weekly-forecast {
-        margin-top: 10px; /* Further reduce top margin for very small screens */
-
-    }
-    .temp-icons h1 {
-        font-size: 48px;
-    }
-
-    .icons p {
-        font-size: 12px;
-    }
-
-    .side-temp h2 {
-        font-size: 28px;
-    }
-    .weekly-forecast {
-        width: 15%;
-        font-size: 10px;
-    }
-    .hourly-item {
-        width: 25%;
-        font-size: 12px;
-    }
-
-    .details p {
-        font-size: 12px;
-    }
-}
-@media screen and (max-width: 1024px) {
+/* Media Query for 1024px and below */
+@media (max-width: 1024px) {
     .weather-widget {
-        display: flex; 
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .weekly-forecast {
-        margin-top: 4px;
-        padding: 10px;
-    }
-
-    .poki {
-        margin-bottom: 5px;
+        flex-direction: column; /* Stack sections vertically */
+        width: auto; /* Adjust width to fit within the screen */
+        height: auto;
+        padding: 5px; /* Adjust padding for smaller screens */
     }
 
     .main-section {
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-        width: 250%;
+        width: 10px; /* Decrease width to 70% for better fit */
+        padding: 15px; /* Adjust padding as needed */
+        margin: 0 auto; /* Center align the main section */
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
+
+    .side-section {
+        width: 100%; /* Make side section full width */
+        padding: 15px; /* Adjust padding for smaller screens */
+        border-left: none; /* Remove side border */
+        border-top: 1px solid #ddd; /* Add a top border instead */
+    }
+
+    .weekly-forecast {
+        display: flex;
+        flex-wrap: wrap; /* Enable wrapping for forecast items */
+        justify-content: center; /* Center the wrapped items */
+        gap: 8px; /* Add gap between wrapped items */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        width: 80%; /* Ensure the forecast section takes full width */
+        padding: 10px; /* Adjust padding to fit items */
+        box-sizing: border-box; /* Include padding and border in width calculation */
+    }
+
+    .forecast-item {
+        width: 40px; /* Reduce width for each day to fit more items */
+        margin: 5px; /* Adjust margin for better spacing */
+        box-sizing: border-box; /* Include padding and border in width calculation */
+        text-align: center;
+    }
+
+    .poki {
+        grid-template-columns: repeat(2, 100px); /* Adjust grid for smaller screens */
+        gap: 5px; /* Adjust gap for smaller screens */
+    }
+}
+
+/* Media Queries for 768px and below */
+@media (max-width: 768px) {
+    .weather-widget {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .main-section, .side-section {
+        padding: 20px;
+    }
+
+    .location-date {
+        font-size: 16px; /* Adjusted for smaller screens */
+    }
+
+    .temp-icons h1 {
+        font-size: 180px;
+    }
+
+    #weather-desc {
+        font-size: 36px;
+    }
+
+    .icons {
+        font-size: 12px;
+    }
+
+    .weekly-forecast {
+        flex-wrap: wrap; /* Enable wrapping for forecast items */
+        justify-content: center;
+        gap: 10px; /* Adjust gap to fit items */
+    }
+
+    .forecast-item {
+        width: 60px; /* Reduced width for items to fit */
+        margin: 5px; /* Adjusted margin for better spacing */
     }
 
     .side-section {
         border-left: none;
-        width: 80%;
+        border-top: 1px solid #ddd;
+    }
+
+    .poki {
+        grid-template-columns: repeat(2, 100px); /* Adjust grid for smaller screens */
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+}
+
+/* Media Queries for 480px and below */
+@media (max-width: 480px) {
+    .main-section, .side-section {
+        padding: 15px;
+    }
+
+    #city-input {
+        width: 140px;
+        font-size: 12px;
     }
 
     .temp-icons h1 {
+        font-size: 120px;
+    }
+
+    #weather-desc {
+        font-size: 28px;
+    }
+
+    .icons, .forecast-item, .hourly-item {
         font-size: 10px;
+    }
+
+    .weekly-forecast {
+        flex-wrap: wrap; /* Allow wrapping for very small screens */
+        justify-content: center;
+        gap: 5px; /* Adjust gap to fit items */
+    }
+
+    .forecast-item {
+        width: 50px; /* Further reduced width for very small screens */
+        margin: 3px; /* Adjusted margin for tighter fit */
+    }
+
+    .hourly-forecast {
+        margin-top: 10px;
+    }
+
+    .poki {
+        grid-template-columns: repeat(1, 100px); /* Single column grid for very small screens */
+        gap: 5px;
+    }
 }
-.weather-desc{
-    font-size: small;
-    margin-top: 5px;
-}
-.forecast-item{
-    padding: 8px;
-}
-.hourly-item{
-    margin-bottom: 10px;
-    padding: 10px;
-}
-}  
