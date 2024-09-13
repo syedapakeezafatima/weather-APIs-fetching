@@ -7,22 +7,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 10px; /* Reduced padding for left and right */
     height: 100vh;
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .weather-widget {
     background-color: white;
     border-radius: 20px;
     display: flex;
-    width: 1400px;
+    width: 100%;
+    max-width: 1300px; /* Maintain max-width for responsiveness */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    flex-direction: row;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
 
 /* Main section styling */
 .main-section {
-    padding: 30px;
+    padding: 20px; /* Adjusted padding for better fit */
     flex: 3;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    width: 100%; /* Allow full width */
 }
 
 /* Search Section */
@@ -30,8 +37,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 20px;
-    margin-top: 8px;
+    margin: 8px 0 20px;
 }
 
 .search-section {
@@ -39,30 +45,33 @@ body {
     gap: 10px;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    max-width: 600px; /* Limit width for better responsiveness */
 }
 
-/* Increase the width of the search bar */
 #city-input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 500px; /* Increased width for the search bar */
+    width: 100%; /* Make search input take full width */
+    max-width: 500px; /* Maintain max-width for responsiveness */
 }
 
 button {
     background-color: transparent;
-    border: none; /* Corrected border styling */
+    border: none;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Corrected box-shadow property */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Location and date styling */
 .location-date {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    font-size: 18px; /* Increased font size for city name and date */
+    font-size: 18px;
     color: #555;
+    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
 }
 
 /* Temperature and icons styling */
@@ -89,111 +98,97 @@ button {
 /* Weekly forecast styling */
 .weekly-forecast {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Center the items within the container */
     align-items: center;
-    margin-top: 35px;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
-}
-
-/* Forecast item styling */
-/* Weekly forecast styling */
-.weekly-forecast {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 35px;
-    flex-wrap: nowrap;
-    overflow: hidden; /* Prevent horizontal scrolling */
-    width: 100%; /* Ensure the container takes full width */
-    padding: 0 15px; /* Add padding to the container for spacing */
-    box-sizing: border-box; /* Include padding in width calculation */
+    margin-top: 20px; /* Reduced margin on top */
+    width: 100%;
+    padding: 0 10px; /* Reduced padding for a tighter fit */
+    box-sizing: border-box;
+    gap: 10px; /* Consistent gap between items */
 }
 
 /* Forecast item styling */
 .forecast-item {
     text-align: center;
-    padding: 25px 10px; /* Increased padding */
-    border-radius: 10px;
-    width: 90px;
-    font-size: 16px;
+    padding: 17px 8px; /* Reduced padding for a smaller size */
+    border-radius: 8px; /* Adjusted border-radius to match the design */
+    width: 60px; /* Reduced width for smaller items */
+    font-size: 14px; /* Smaller font size for overall item */
     color: #777;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    display: flex; /* Flex to center-align content */
-    flex-direction: column; /* Align content vertically */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
     border: 1px solid transparent;
-    flex: 0 0 auto; /* Prevent shrinking and allow all items to be in a row */
-    margin: 0 5px; /* Reduce spacing between each day */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+    flex: 0 0 auto;
+    margin: 0 7px; /* Reduced margin between items */
+    box-sizing: border-box;
 }
 
-/* Highlight the first forecast item (e.g., Today) */
 .forecast-item:first-child {
     border: 2px solid #e3e2e2;
     font-weight: normal;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 25px 10px; /* Match the padding of other items */
-    width: 90px;
+    padding: 15px 5px; /* Match padding with other items */
+    width: 60px; /* Match width with other items */
 }
 
-/* Forecast item text styling */
 .forecast-item h3 {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 14px; /* Smaller font size for the day */
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 2px; /* Reduced margin below the day name */
 }
 
 .forecast-item p {
-    font-size: 14px;
+    font-size: 12px; /* Smaller font size for the weather description */
     color: #888;
     margin: 0;
 }
 
-/* Hover effect */
 .forecast-item:hover {
     background-color: #f9f9f9;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-
 /* Side section styling */
 .side-section {
     background-color: #f8f8f8;
-    padding: 30px;
+    padding: 20px; /* Adjusted padding for smaller screens */
     flex: 1;
     border-left: 1px solid #ddd;
+    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%; /* Allow full width */
 }
 
 .greeting {
     margin-bottom: 30px;
     text-align: center;
-    font-size: 22px; /* Increased font size for greetings */
+    font-size: 22px;
 }
 
 .greeting p:first-child {
-    font-size: 36px; /* Further increased font size for greeting title */
+    font-size: 36px;
     margin-bottom: 5px;
-    font-weight: bold; /* Corrected font-weight */
+    font-weight: bold;
 }
 
 .greeting p:last-child {
-    font-size: 32px; /* Further increased font size for greeting message */
+    font-size: 32px;
     color: #777;
-    font-weight: bold; /* Corrected font-weight */
+    font-weight: bold;
 }
 
 .side-temp {
     text-align: center;
     color: #444;
     margin: 20px;
-    font-size: 120px; /* Further increased font size for side temp */
+    font-size: 120px;
 }
 
 .temp-details {
@@ -202,7 +197,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    font-size: 22px; /* Further increased font size for temp details */
+    font-size: 22px;
 }
 
 .side-info {
@@ -221,20 +216,20 @@ button {
 }
 
 .feels-like {
-    font-size: 18px; /* Further increased font size for feels like */
+    font-size: 18px;
     color: #555;
     margin-top: 5px;
 }
 
-/* Hourly forecast design */
+/* Hourly forecast styling */
 .hourly-forecast {
     margin: 55px 0 10px;
     text-align: center;
-    font-size: 28px; /* Further increased font size for hourly forecast title */
+    font-size: 28px;
 }
 
 .hourly-forecast h5 {
-    font-size: 28px; /* Further increased font size for hourly forecast heading */
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
@@ -267,63 +262,61 @@ button {
     display: block;
     margin-top: 10px;
     font-weight: 400;
-    font-size: 22px; /* Further increased font size for time */
+    font-size: 22px;
 }
 
 .temperature {
     display: block;
-    font-size: 24px; /* Further increased font size for temperature */
+    font-size: 24px;
     font-weight: normal;
     margin: 3px 0;
 }
 
 .weather-condition {
     display: block;
-    font-size: 20px; /* Further increased font size for weather condition */
-    font-weight: normal;
+    font-size: 20px;
     margin: 6px 0;
 }
 
 .weather-condition.rain {
-    font-size: 20px;
     color: #858585;
 }
-/* Media Query for 1024px and below */
+
+/* Media Queries */
 @media (max-width: 1024px) {
     .weather-widget {
+        margin-top: 1000px;
         flex-direction: column; /* Stack sections vertically */
-        width: auto; /* Adjust width to fit within the screen */
-        height: auto;
+        width: 100%;
         padding: 5px; /* Adjust padding for smaller screens */
+        box-sizing: border-box; /* Include padding in width calculation */
     }
 
     .main-section {
-        width: 10px; /* Decrease width to 70% for better fit */
+        
+        width: 70%;
         padding: 15px; /* Adjust padding as needed */
-        margin: 0 auto; /* Center align the main section */
+        margin: 0 auto;
         box-sizing: border-box; /* Ensure padding is included in the width */
     }
 
     .side-section {
-        width: 100%; /* Make side section full width */
+        width: 100%; /* Adjust width of the side section */
         padding: 15px; /* Adjust padding for smaller screens */
         border-left: none; /* Remove side border */
         border-top: 1px solid #ddd; /* Add a top border instead */
+        box-sizing: border-box; /* Include padding in width calculation */
     }
 
     .weekly-forecast {
-        display: flex;
-        flex-wrap: wrap; /* Enable wrapping for forecast items */
         justify-content: center; /* Center the wrapped items */
-        gap: 8px; /* Add gap between wrapped items */
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-        width: 80%; /* Ensure the forecast section takes full width */
+        width: 100%; /* Ensure the forecast section takes full width */
         padding: 10px; /* Adjust padding to fit items */
         box-sizing: border-box; /* Include padding and border in width calculation */
     }
 
     .forecast-item {
-        width: 40px; /* Reduce width for each day to fit more items */
+        width: 50px; /* Adjust width for items to fit better */
         margin: 5px; /* Adjust margin for better spacing */
         box-sizing: border-box; /* Include padding and border in width calculation */
         text-align: center;
@@ -335,20 +328,10 @@ button {
     }
 }
 
-/* Media Queries for 768px and below */
 @media (max-width: 768px) {
-    .weather-widget {
-        flex-direction: column;
-        width: 90%;
-        height: auto;
-    }
-
-    .main-section, .side-section {
-        padding: 20px;
-    }
 
     .location-date {
-        font-size: 16px; /* Adjusted for smaller screens */
+        font-size: 16px;
     }
 
     .temp-icons h1 {
@@ -359,40 +342,25 @@ button {
         font-size: 36px;
     }
 
-    .icons {
-        font-size: 12px;
-    }
-
     .weekly-forecast {
-        flex-wrap: wrap; /* Enable wrapping for forecast items */
-        justify-content: center;
-        gap: 10px; /* Adjust gap to fit items */
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .forecast-item {
-        width: 60px; /* Reduced width for items to fit */
-        margin: 5px; /* Adjusted margin for better spacing */
-    }
-
-    .side-section {
-        border-left: none;
-        border-top: 1px solid #ddd;
-    }
-
-    .poki {
-        grid-template-columns: repeat(2, 100px); /* Adjust grid for smaller screens */
-        gap: 10px; /* Adjust gap for smaller screens */
+        width: 50px;
+        margin: 5px;
     }
 }
 
-/* Media Queries for 480px and below */
 @media (max-width: 480px) {
     .main-section, .side-section {
         padding: 15px;
     }
 
     #city-input {
-        width: 140px;
+        width: 100%;
+        max-width: 140px;
         font-size: 12px;
     }
 
@@ -404,27 +372,18 @@ button {
         font-size: 28px;
     }
 
-    .icons, .forecast-item, .hourly-item {
-        font-size: 10px;
-    }
-
     .weekly-forecast {
-        flex-wrap: wrap; /* Allow wrapping for very small screens */
-        justify-content: center;
-        gap: 5px; /* Adjust gap to fit items */
+        flex-wrap: wrap;
+        gap: 5px;
     }
 
     .forecast-item {
-        width: 50px; /* Further reduced width for very small screens */
-        margin: 3px; /* Adjusted margin for tighter fit */
-    }
-
-    .hourly-forecast {
-        margin-top: 10px;
+        width: 40px; /* Further reduced width for very small screens */
+        margin: 3px;
     }
 
     .poki {
-        grid-template-columns: repeat(1, 100px); /* Single column grid for very small screens */
+        grid-template-columns: repeat(1, 100px);
         gap: 5px;
     }
 }
